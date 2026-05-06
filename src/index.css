@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6366f1; /* Indigo 500 */
+  --color-primary-container: rgba(99, 102, 241, 0.1);
+  --color-secondary: #94a3b8; /* Slate 400 */
+  --color-tertiary: #f43f5e; /* Rose 500 */
+  --color-tertiary-container: rgba(244, 63, 94, 0.1);
+  --color-background: #020617;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-high: rgba(255, 255, 255, 0.08);
+  --color-surface-highest: rgba(255, 255, 255, 0.12);
+  --color-on-surface: #f8fafc; /* Slate 50 */
+  --color-on-surface-variant: #94a3b8; /* Slate 400 */
+  --color-outline-variant: rgba(255, 255, 255, 0.1);
+
+  --font-headline: "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans antialiased selection:bg-primary/30;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl transition-all;
+  }
+  
+  .glass-nav {
+    @apply bg-white/5 backdrop-blur-2xl border-b border-white/10;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
